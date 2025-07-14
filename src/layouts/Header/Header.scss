@@ -1,0 +1,104 @@
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  padding-block: fluid(35, 30);
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 150px;
+  transition: padding-block var(--transition-duration),
+  background-color var(--transition-duration),
+  box-shadow var(--transition-duration);
+
+  @keyframes scrolling-header {
+    to {
+      box-shadow: 0px 13px 24px 0px rgba(253, 249, 182, 0.20);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__overlay-menu-dialog {
+    position: absolute;
+    top: 85px;
+    margin-top: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 20px var(--container-padding-x);
+    border: none;
+    transition-duration:  var(--transition-duration);
+    transition-behaviour: allow-discrete;
+
+    animation-name: scrolling-header-dialog;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+
+    @keyframes scrolling-header-dialog {
+      to {
+        box-shadow: 0px 13px 24px 0px rgba(253, 249, 182, 0.20);
+      }
+    }
+
+    @include tablet-above {
+      display: contents;
+    }
+
+    @mixin starting-styles {
+      opacity: 0;
+      translate: 50%;
+    }
+
+    &[open] {
+      @starting-style {
+        @include starting-styles;
+      }
+    }
+
+    &:not([open]) {
+      @include starting-styles;
+    }
+  }
+
+  &__body {
+    display: flex;
+    gap: 92px;
+
+    @include laptop {
+      gap: 38px;
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 0 54px;
+
+      @include tablet {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+
+    &-item {
+      @include tablet{
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: var(--border-20);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

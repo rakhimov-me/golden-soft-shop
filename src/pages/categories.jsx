@@ -5,7 +5,7 @@ export const metadata = {
 export default () => {
   return (
     <>
-      <h1>Index.jsx</h1>
+      <h1>categories.jsx</h1>
     </>
   )
 }
