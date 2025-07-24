@@ -1,0 +1,56 @@
+.hero {
+  padding-block: 70px 50px;
+
+  &__body {
+    @include flex-center();
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  &__suggestion {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-height: 60vh;
+
+    &-img {
+      height: 75vh;
+    }
+  }
+
+  &__content {
+    max-width: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-title {
+
+    }
+
+    &-description {
+      max-width: 80%;
+      margin-bottom: 12px;
+    }
+
+    &-purchase {
+      &-title {
+        font-size: 12px;
+      }
+
+      &-price{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        margin-block: 4px 16px;
+
+        &-old {
+          color:  var(--text-gray-light);
+          text-decoration-line: line-through;
+          text-decoration-thickness: 0.5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.callback {
+  background-color: var(--bg-blue);
+
+  &__body {
+    @include flex-center();
+    flex-direction: column;
+    padding-block: 64px 56px;
+    gap: 24px;
+
+    &-form {
+      display: flex;
+      gap: 24px;
+
+      &-input {
+        width: 240px;
+        padding: 12px 16px;
+        background-color: color-mix(in srgb, var(--color-dark) 4%, transparent);
+        border: var(--border-width-l) solid transparent;
+
+        &:focus,
+        &:active {
+          border-color: var(--color-primary);
+          outline: none; // по желанию
+        }
+      }
+    }
+  }
+}

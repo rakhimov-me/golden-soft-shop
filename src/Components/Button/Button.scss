@@ -1,0 +1,45 @@
+.button {
+  @include flex-center(true);
+
+  width: 220px;
+  padding-block: 12px;
+  font-weight: 500;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  user-select: none;
+  cursor: pointer;
+
+  @include mobile {
+    width: 100%;
+    padding-block: 15px;
+  }
+
+  @include hover {
+    color: var(--color-white);
+    background-color: var(--color-primary-hover);
+  }
+
+  &:active {
+    background-color: var(--color-primary-click);
+  }
+}
+
+
+
+/*
+When it hasn't any text
+*/
+
+.button__icon {
+  @include flex-center(true);
+  background-color: transparent;
+  border: none;
+  svg {
+    color: var(--color-gray);
+
+    @include hover {
+      color: var(--color-primary);
+    }
+  }
+}

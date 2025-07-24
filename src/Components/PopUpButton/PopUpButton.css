@@ -1,0 +1,40 @@
+.popup-button-wrapper {
+  position: relative;
+}
+
+.popup-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.popup-button .popup-button__chevron {
+  transition: transform var(--transition-duration) ease;
+  transform: rotate(var(--rotate, 0deg));
+}
+.popup-button:hover, .popup-button:focus {
+  color: var(--color-primary);
+}
+.popup-button:hover .popup-button__chevron, .popup-button:focus .popup-button__chevron {
+  stroke: var(--color-primary);
+}
+.popup-button__label {
+  margin: 0;
+}
+
+.popup-content {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-item {
+  padding: 5px 0;
+}
+
+/*# sourceMappingURL=PopUpButton.css.map */

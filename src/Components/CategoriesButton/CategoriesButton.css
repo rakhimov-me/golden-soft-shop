@@ -1,0 +1,17 @@
+.categories__button {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-black);
+  border: var(--border-width-s) solid var(--color-black);
+  text-decoration: none;
+  border-radius: var(--border-radius-s);
+  font-weight: 500;
+  padding: 12px 78px;
+}
+.categories__button:hover {
+  background-color: var(--color-black);
+  color: var(--color-white) !important;
+  border-color: var(--color-black);
+}
+
+/*# sourceMappingURL=CategoriesButton.css.map */

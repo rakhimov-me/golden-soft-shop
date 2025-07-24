@@ -1,0 +1,46 @@
+:root {
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(0, 0, 0);
+  --color-dark: rgb(22, 28, 36);
+
+  --color-primary: rgb(66, 149, 228);
+  --color-primary-hover: rgb(86, 169, 248);
+  --color-primary-click: rgb(46, 129, 208);
+
+  --color-gray: rgb(69, 79, 91);
+  --text-gray-light: rgb(164, 164, 164); // старая цена на страница продукта
+  --text-gray-lighter: rgb(196, 205, 213); // футер разделы [тетефоны email] // слайдер кпоки
+
+  --success: rgb(36, 197, 110);
+  --error: rgb(228, 66, 134);
+
+  --bg-dark: rgb(13, 36, 54);
+  --bg-blue: rgb(242, 248, 255);  // промо
+  --surface: rgb(246, 247, 249); // описание в продукте
+  --surface-lighter: rgb(250, 250, 250); // херектеристики продукта
+
+
+  --color-border: rgb(196, 205, 213); // бордер
+  --color-border-light: rgb(234, 234, 234); // бордер всех карточек
+
+  --border-width-s: 1px;
+  --border-width-l: 2px;
+  --border-radius-s: 2px;
+  --border-gray: var(--border-width) solid var(--color-border);
+  --border-gray-light: var(--border-width) solid var(--color-border-light);
+
+  --font-family-base: 'SF Pro Text', sans-serif;
+
+
+  --container-width: #{fluid-to-laptop(
+    $container-desktop-width,
+    $container-laptop-width
+  )};
+
+
+  --container-padding-x: 16px;
+  --section-padding-y: #{fluid(100, 40)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}

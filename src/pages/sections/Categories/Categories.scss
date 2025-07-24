@@ -1,0 +1,15 @@
+.categories {
+  margin-bottom: var(--section-padding-y);
+
+  &__body {
+    @include flex-center();
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}

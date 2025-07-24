@@ -1,0 +1,31 @@
+.categories__card {
+  display: flex;
+  padding: 40px;
+  width: 35vw;
+  position: relative;
+}
+.categories__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: color-mix(in srgb, black 2%, transparent);
+  pointer-events: none;
+}
+.categories__card-image {
+  width: 50%;
+  margin-bottom: 15px;
+  background-color: color-mix(in srgb, black 2%, transparent);
+  position: relative;
+  display: inline-block;
+}
+.categories__card-label {
+  align-self: flex-end;
+}
+.categories__card-label-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--color-black);
+}
+
+/*# sourceMappingURL=CategoriesCard.css.map */

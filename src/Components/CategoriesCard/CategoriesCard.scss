@@ -1,0 +1,38 @@
+.categories__card {
+  display: flex;
+  padding: 40px;
+  width: 35vw;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: color-mix(in srgb, black 2%, transparent);
+    pointer-events: none;
+  }
+
+
+  &-image {
+    width: 50%;
+    margin-bottom: 15px;
+    background-color: color-mix(in srgb, black 2%, transparent);
+    position: relative;
+    display: inline-block;
+  }
+
+  &-label {
+    align-self: flex-end;
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 500;
+      font-size: 22px;
+      color:  var(--color-black);
+    }
+
+    &-mobile {
+
+    }
+  }
+}

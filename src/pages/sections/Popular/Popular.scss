@@ -1,0 +1,44 @@
+.popular {
+  margin-bottom: var(--section-padding-y);
+
+  &__body {
+    @include flex-center();
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  &__head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-arrows {
+      svg {
+        cursor: pointer;
+
+        &:first-child {
+          color: var(--text-gray-lighter);
+          margin-right: 40px;
+        }
+
+        &:last-child {
+          color: var(--color-black);
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__cards {
+    width: 100%;
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 30px;
+      align-items: stretch;
+      grid-auto-rows: minmax(400px, auto);
+    }
+  }
+}

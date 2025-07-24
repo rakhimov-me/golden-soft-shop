@@ -1,0 +1,21 @@
+.stat {
+    background-color: var(--bg-blue);
+
+  &__body {
+    @include flex-center();
+    padding-block: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 82px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+}
