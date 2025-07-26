@@ -1,7 +1,16 @@
 import './Card.scss';
 
 const Card = (props) => {
-  const { image, title, price, oldPrice, isInCatalog, inStock, withGift, onSale } = props;
+  const {
+    image,
+    title,
+    price,
+    oldPrice,
+    isInCatalog,
+    inStock,
+    withGift,
+    onSale
+  } = props;
 
   return (
     <div className="card">

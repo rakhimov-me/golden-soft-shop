@@ -28,7 +28,7 @@ const Hero = () => {
     },
   ];
 
-  const { productIndex = 0 } = {}; // Временная заглушка, можно убрать, если не нужен динамический индекс
+  const { productIndex = 0 } = {};
 
   const {
     imageSrc,
