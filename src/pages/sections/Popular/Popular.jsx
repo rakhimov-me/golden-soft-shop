@@ -8,44 +8,37 @@ const Popular = (props) => {
     {
       image: '/src/assets/images/Lock-hotel-2.jpeg',
       title: 'Дверной замок Golden Soft для отелей',
-      price: '33 000₽',
-      oldPrice: '37 000₽',
-      isInCatalog: true,
-      inStock: true,
-      withGift: false,
-      onSale: true,
+      priceInfo: { current: '33 000₽', previous: '37 000₽' },
+      statuses: { inStock: true,  withGift: false, onSale: false },
+      reviewSummary: { averageRating: 2.2, reviewsCount: 5 },
+      outOfCatalog: true
     },
     {
       image: '/src/assets/images/Lock-hotel-3.jpeg',
       title: 'Вариативный замок Golden Soft для отелей',
-      price: '7 000₽',
-      oldPrice: '8 000₽',
-      isInCatalog: true,
-      inStock: false,
-      withGift: true,
-      onSale: false,
+      priceInfo: { current: '7 000₽',  previous: '8 000₽' },
+      statuses: { inStock: false, withGift: true, onSale: true  },
+      reviewSummary: { averageRating: 4.0, reviewsCount: 8 },
+      outOfCatalog: true
     },
     {
       image: '/src/assets/images/Lock-office.jpeg',
       title: 'Дверной замок Golden Soft для офиса',
-      price: '33 000₽',
-      oldPrice: '39 000₽',
-      isInCatalog: true,
-      inStock: true,
-      withGift: true,
-      onSale: false,
+      priceInfo: { current: '33 000₽', previous: '39 000₽' },
+      statuses: { inStock: true,  withGift: true, onSale: true  },
+      reviewSummary: { averageRating: 3.5, reviewsCount: 5 },
+      outOfCatalog: true
     },
     {
       image: '/src/assets/images/Lock-office-2.jpeg',
       title: 'Дверной замок Golden Soft для дома',
-      price: '9 000₽',
-      oldPrice: '12 000₽',
-      isInCatalog: true,
-      inStock: false,
-      withGift: false,
-      onSale: true,
-    },
+      priceInfo: { current: '9 000₽',  previous: '12 000₽' },
+      statuses: { inStock: false, withGift: false, onSale: true  },
+      reviewSummary: { averageRating: 0, reviewsCount: 0 },
+      outOfCatalog: true
+    }
   ];
+
 
   return (
     <section className="popular">
