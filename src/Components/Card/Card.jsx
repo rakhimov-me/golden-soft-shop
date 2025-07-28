@@ -12,6 +12,7 @@ const Card = (props) => {
     onSale
   } = props;
 
+
   return (
     <div className="card">
       <div className="card__image-wrapper">
