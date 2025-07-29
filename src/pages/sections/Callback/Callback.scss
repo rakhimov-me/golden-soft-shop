@@ -20,7 +20,12 @@
         &:focus,
         &:active {
           border-color: var(--color-primary);
-          outline: none; // по желанию
+          outline: none;
+        }
+        &:not(:placeholder-shown):not(:focus) {
+          background-color: color-mix(in srgb, var(--color-primary) 4%, transparent);
+          border: var(--border-width-l) solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+          color: var(--color-dark);
         }
       }
     }

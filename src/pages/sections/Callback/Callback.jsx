@@ -20,12 +20,15 @@ const Callback = (props) => {
             className="callback__body-form-input"
             placeholder="Ваше имя"
             type="text"
+            required
           />
           <input
             className="callback__body-form-input"
             placeholder="Ваш Email"
             type="text"
+            required
           />
+
 
           <Button className="callback__body-form-button" label="Отправить" />
         </div>
