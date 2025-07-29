@@ -1,11 +1,11 @@
 import React from 'react';
-import './Card.scss';
+import './ProductCard.scss';
 import { ReactComponent as InStockLogo } from "@/assets/icons/InStock.svg";
 import { ReactComponent as OutOfStockLogo } from "@/assets/icons/OutOfStock.svg";
 import { ReactComponent as GiftLogo } from "@/assets/icons/Gift.svg";
 import { ReactComponent as Star } from "@/assets/icons/Star.svg";
 
-  const Card = ({
+  const ProductCard = ({
                 image,
                 title,
                 priceInfo,
@@ -72,4 +72,4 @@ import { ReactComponent as Star } from "@/assets/icons/Star.svg";
   );
 };
 
-export default Card;
+export default ProductCard;
