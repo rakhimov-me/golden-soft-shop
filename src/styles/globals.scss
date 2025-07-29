@@ -84,7 +84,7 @@ a {
   }
 
   &[class] {
-    color: var(--color-black);
+    color: inherit;
     text-decoration: none;
 
     @include hover {
