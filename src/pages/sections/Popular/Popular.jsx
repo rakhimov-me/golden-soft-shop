@@ -1,5 +1,5 @@
 import './Popular.scss';
-import Card from '@/Components/Card';
+import ProductCard from '@/Components/ProductCard';
 
 const Popular = (props) => {
   const {} = props;
@@ -74,7 +74,7 @@ const Popular = (props) => {
           <ul className="popular__cards-list">
             {products.map((product, index) => (
               <li key={index} className="popular__cards-list-item">
-                <Card {...product} />
+                <ProductCard {...product} />
               </li>
             ))}
           </ul>
