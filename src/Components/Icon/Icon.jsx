@@ -12,11 +12,13 @@ const Icon = (props) => {
   return (
     <span className={classNames(className, 'icon')}>
       <MinistaIcon
-        iconId={name}
+        className={classNames({
+          [`${className}-svg`]: className,
+          'icon__svg': true,
+        })}        iconId={name}
         fill={hasFill ? 'currentColor' : 'none'}
         stroke={hasFill ? 'none' : 'currentColor'}
       />
-      <a href="">dasldasd</a>
     </span>
   )
 }

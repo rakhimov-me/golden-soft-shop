@@ -1,0 +1,20 @@
+.promo {
+  padding-block: fluid(7, 12);
+  color: var(--color-white);
+  background-color: var(--color-gray);
+
+  &-body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-text {
+    letter-spacing: 0.15em;
+  }
+
+  a {
+    color: var(--color-white);
+    text-decoration-color: var(--color-white);
+    text-decoration-thickness: 1.5px;
+  }
+}
