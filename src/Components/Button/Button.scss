@@ -1,6 +1,7 @@
 .button {
   @include flex-center(true);
 
+  column-gap: 4px;
   width: 220px;
   padding-block: 12px;
   font-weight: 500;
@@ -22,6 +23,22 @@
 
   &:active {
     background-color: var(--color-primary-click);
+  }
+
+  &--transparent {
+    background-color: transparent;
+
+    &:has(.button__icon:only-child) {
+      @include square(44px);
+
+      .button__icon {
+        --iconSize: #{fluid-to-laptop(34, 24)};
+      }
+    }
+
+    @include hover() {
+      background-color: transparent;
+    }
   }
 }
 

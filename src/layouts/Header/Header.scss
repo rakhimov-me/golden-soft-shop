@@ -36,27 +36,6 @@
     }
   }
 
-  &__promo {
-    padding-block: fluid(7, 12);
-    color: var(--color-white);
-    background-color: var(--color-gray);
-
-    &-body {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &-text {
-      letter-spacing: 0.15em;
-    }
-
-    a {
-      color: var(--color-white);
-      text-decoration-color: var(--color-white);
-      text-decoration-thickness: 1.5px;
-    }
-  }
-
   &__body {
     display: flex;
     align-items: center;
@@ -74,42 +53,22 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+
+    &-button {
+
+      &-icon {
+
+      }
+    }
   }
 
   &__phone {
     white-space: nowrap;
     @include flex-center(true);
     gap: 8px;
+
+    &-icon {
+      @include square(20px);
+    }
   }
-}
-
-
-// ПОпап
-
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 1000;
-}
-
-.submenu.active {
-  display: block;
-}
-
-.submenu__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.submenu__item {
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.submenu__item:hover {
-  background-color: #f0f0f0;
 }
