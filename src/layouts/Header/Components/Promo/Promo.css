@@ -1,0 +1,19 @@
+.promo {
+  padding-block: fluid(7, 12);
+  color: var(--color-white);
+  background-color: var(--color-gray);
+}
+.promo-body {
+  display: flex;
+  justify-content: space-between;
+}
+.promo-text {
+  letter-spacing: 0.15em;
+}
+.promo a {
+  color: var(--color-white);
+  text-decoration-color: var(--color-white);
+  text-decoration-thickness: 1.5px;
+}
+
+/*# sourceMappingURL=Promo.css.map */
