@@ -8,8 +8,11 @@
   --color-primary-click: rgb(46, 129, 208);
 
   --color-gray: rgb(69, 79, 91);
-  --text-gray-light: rgb(164, 164, 164); // старая цена на страница продукта
-  --text-gray-lighter: rgb(196, 205, 213); // футер разделы [тетефоны email] // слайдер кпоки
+  --color-gray-light: rgb(164, 164, 164); // старая цена на страница продукта
+  --color-gray-lighter: rgb(196, 205, 213); // футер разделы [тетефоны email] // слайдер кпоки
+
+  --color-border: rgb(196, 205, 213); // бордер
+  --color-border-light: rgb(234, 234, 234); // бордер всех карточек
 
   --success: rgb(36, 197, 110);
   --error: rgb(228, 66, 134);
@@ -20,15 +23,11 @@
   --surface: rgb(246, 247, 249); // описание в продукте
   --surface-lighter: rgb(250, 250, 250); // херектеристики продукта
 
-
-  --color-border: rgb(196, 205, 213); // бордер
-  --color-border-light: rgb(234, 234, 234); // бордер всех карточек
-
   --border-width-s: 1px;
   --border-width-l: 2px;
   --border-radius-s: 2px;
-  --border-gray: var(--border-width) solid var(--color-border);
-  --border-gray-light: var(--border-width) solid var(--color-border-light);
+  --border-gray: var(--border-width-s) solid var(--color-border);
+  --border-gray-light: var(--border-width-s) solid var(--color-border-light);
 
   --font-family-base: 'SF Pro Text', sans-serif;
 

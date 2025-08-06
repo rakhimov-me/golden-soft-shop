@@ -28,8 +28,6 @@ const Callback = (props) => {
             type="text"
             required
           />
-
-
           <Button className="callback__body-form-button" label="Отправить" />
         </div>
       </div>

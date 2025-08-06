@@ -1,0 +1,51 @@
+.test {
+  padding-block: var(--section-padding-y);
+
+  &__body {
+    @include flex-center();
+    flex-direction: column;
+    gap: 50px;
+
+    .button-test {
+      @include flex-center();
+      flex-direction: column;
+
+      &__button {
+//        outline: black 1px solid;
+
+        &-icon {
+//          outline: red 1px dashed;
+        }
+      }
+    }
+
+    .test__row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content:  center;
+      gap: 200px;
+    }
+
+    &-title {
+      width: 100%;
+      text-align: center;
+      border-top:  1px solid var(--text-gray-lighter);
+      padding-top: 10px;
+    }
+
+
+
+  }
+}
+
+.light {
+  background-color: var(--bg-dark);
+}
+
+.button-test__button {
+
+  svg {
+//    stroke: red;
+  }
+}

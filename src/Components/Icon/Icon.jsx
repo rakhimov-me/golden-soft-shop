@@ -7,6 +7,7 @@ const Icon = (props) => {
     className,
     name,
     hasFill = false,
+    iconSize = 32,
   } = props
 
   return (
@@ -15,9 +16,11 @@ const Icon = (props) => {
         className={classNames({
           [`${className}-svg`]: className,
           'icon__svg': true,
-        })}        iconId={name}
+        })}
+        iconId={name}
         fill={hasFill ? 'currentColor' : 'none'}
         stroke={hasFill ? 'none' : 'currentColor'}
+        style={{ maxWidth: `${iconSize}px`, maxHeight: `${iconSize}px` }}
       />
     </span>
   )

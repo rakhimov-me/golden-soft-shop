@@ -6,7 +6,7 @@
 
   @include hover(){
     .card__image {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
     .card__content-title {
       color: var(--color-primary);
@@ -109,9 +109,8 @@
 
   &__content {
     padding: 10px 12px;
-    border-left: 1px solid var(--color-border-light, #e0e0e0);
-    border-right: 1px solid var(--color-border-light, #e0e0e0);
-    border-bottom: 1px solid var(--color-border-light, #e0e0e0);
+    border: var(--border-gray-light);
+    border-top: none;
 
     &-title {
     }
@@ -125,13 +124,15 @@
       &-new {
         font-size: 20px;
         font-weight: 600;
-        color: #000;
+        color: var(--color-black);
       }
 
       &-old {
         font-size: 16px;
         text-decoration: line-through;
-        color: #888;
+        font-weight: 300;
+        text-decoration-thickness: 1px;
+        color: var(--color-gray);
       }
     }
 
@@ -144,7 +145,7 @@
       &-stars {
 
         .card__star {
-          color:  var(--text-gray-lighter);
+          color:  var(--color-gray-lighter);
         }
         .card__star--filled {
           fill: var(--golden);

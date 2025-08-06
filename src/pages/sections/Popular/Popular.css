@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 5 \2502      @include flex-center();\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   Popular.scss 5:5  root stylesheet";
+  content: "Error: Undefined mixin.\a   \2577 \a 5 \2502      @include flex-center();\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   Popular.scss 5:5  root stylesheet";
 }

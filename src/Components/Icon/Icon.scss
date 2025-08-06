@@ -1,7 +1,14 @@
   .icon {
     display: inline-flex;
+    /*--iconSize: 32px;
+    width: 28px;
+    height:  28px;
+
+    @include square(var(--iconSize));*/
 
     .icon__svg {
       stroke-linecap: round;
+//      outline: red 1px dashed;
+//      fill: red;
     }
   }

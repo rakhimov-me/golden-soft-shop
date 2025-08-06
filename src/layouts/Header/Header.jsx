@@ -2,11 +2,8 @@ import React, {useState} from 'react';
 import './Header.scss';
 import Logo from '@/Components/Logo';
 import PopUpButton from '@/Components/PopUpButton';
-import { ReactComponent as LikedButton} from "@/assets/icons/LikedButton.svg";
-import { ReactComponent as CartButton} from "@/assets/icons/CartButton.svg";
-import Icon from "@/Components/Icon";
-import Button from "@/Components/Button/index.js";
-import Promo from "@/layouts/Header/Components/Promo/index.js";
+import Button from "@/Components/Button";
+import Promo from "@/layouts/Header/Components/Promo";
 
 
 const Header = (props) => {
@@ -52,9 +49,7 @@ const Header = (props) => {
                 </li>
               ) : (
                 <li key={index}>
-                  <a href={item.href} className="header__menu-link">
-                    {item.label}
-                  </a>
+                  <Button href={item.href} label={item.label} className="header__menu-link" mode="dark" />
                 </li>
               )
             )}
@@ -62,21 +57,32 @@ const Header = (props) => {
 
         </div>
         <div className="header__actions">
-          <a href="tel:+79665588499" className="header__phone">
-            <Icon
-              className="header__phone-icon"
-              name='PhoneIcon'
-              hasFill
+          <Button
+            className="header__phone"
+            label="+7 (966) 55 88 499"
+            iconName="phone"
+            hasFillIcon
+            mode="transparent"
+            iconSize={20}
+          />
+          <div className="header__actions-buttons">
+            <Button
+              className="header__actions-buttons-liked"
+              label="Liked"
+              isLabelHidden
+              mode="transparent"
+              iconName="Liked"
+              hasFillIcon
+              iconSize={200}
             />
-            +7 (966) 55 88 499
-          </a>
-          <div className="header__buttons">
-            <button className="header__actions-button button__icon">
-              <LikedButton className="button__icon-svg"/>
-            </button>
-            <button className="header__actions-button button__icon">
-              <CartButton className="button__icon-svg"/>
-            </button>
+            <Button
+              className="header__actions-buttons-cart"
+              label="Cart"
+              isLabelHidden
+              mode="transparent"
+              iconName="Cart"
+              // hasFillIcon
+            />
           </div>
         </div>
       </div>

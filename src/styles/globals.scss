@@ -69,7 +69,7 @@ textarea,
 input,
 select,
 textarea,
-svg * {
+svg, * {
   transition-duration:  var(--transition-duration);
 }
 
@@ -84,11 +84,7 @@ a {
   }
 
   &[class] {
-    color: inherit;
+    color:  var(--color-gray);
     text-decoration: none;
-
-    @include hover {
-      color:  var(--color-primary);
-    }
   }
 }

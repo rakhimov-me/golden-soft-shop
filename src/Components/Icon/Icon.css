@@ -1,5 +1,10 @@
 .icon {
   display: inline-flex;
+  /*--iconSize: 32px;
+  width: 28px;
+  height:  28px;
+
+  @include square(var(--iconSize));*/
 }
 .icon .icon__svg {
   stroke-linecap: round;

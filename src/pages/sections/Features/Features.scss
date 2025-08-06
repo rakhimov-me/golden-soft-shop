@@ -18,17 +18,8 @@
       gap: 32px;
       max-width: 22vw;
       text-align: center;
-      border-left: var(--border-width-s, 1px) solid var(--color-border, #e0e0e0);
-      border-right: var(--border-width-s, 1px) solid var(--color-border, #e0e0e0);
+      border-inline:   var(--border-gray);
       padding: 24px;
-
-      /*&:first-child {
-        border-left: none;
-      }
-
-      &:last-child {
-        border-right: none;
-      }*/
     }
   }
 }
