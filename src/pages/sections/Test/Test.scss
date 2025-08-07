@@ -20,11 +20,11 @@
     }
 
     .test__row {
-      display: flex;
-      flex-direction: row;
       width: 100%;
-      justify-content:  center;
-      gap: 200px;
+      @include flex-center;
+      flex-direction: row; // Горизонтальное размещение
+      flex-wrap: wrap; // Перенос на следующую строку, если не хватает места
+      gap: 100px; // Промежуток 50px между элементами
     }
 
     &-title {
@@ -48,4 +48,10 @@
   svg {
 //    stroke: red;
   }
+}
+
+.divider {
+  height: 100px;
+  width: 1px;
+  background-color: black;
 }

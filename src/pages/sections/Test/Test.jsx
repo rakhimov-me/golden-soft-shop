@@ -2,6 +2,8 @@ import './Test.scss'
 import Button from "@/Components/Button/index.js";
 import React from "react";
 import Icon from "@/Components/Icon/Icon.jsx";
+import { ReactComponent as TestIcon } from "@/assets/icons/arrow.svg"
+
 
 const Test = (props) => {
   const {} = props
@@ -137,6 +139,30 @@ const Test = (props) => {
               iconSize={20}
             />
           </div>
+          <div className="divider"></div>
+
+          <div className="button-test">
+            <span className="test-title">Only Icon (button) transparent</span>
+            <Button
+              label="previous slide"
+              isLabelHidden
+              mode="transparent"
+            >
+              <TestIcon />
+            </Button>
+          </div>
+
+          <div className="button-test">
+            <span className="test-title">Button: SVGR icon + label</span>
+            <Button
+              label="previous slide"
+              // isLabelHidden
+              // mode="transparent"
+            >
+              <TestIcon />
+            </Button>
+          </div>
+
         </div>
 
         <h3 className="test__body-title">Чисто иконки (без кнопок)</h3>

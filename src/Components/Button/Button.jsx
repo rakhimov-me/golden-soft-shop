@@ -1,6 +1,7 @@
-import './Button.scss'
-import classNames from 'classnames'
-import Icon from '@/components/Icon'
+import React from 'react'; // Добавляем импорт React
+import './Button.scss';
+import classNames from 'classnames';
+import Icon from '@/components/Icon';
 
 const Button = (props) => {
   const {
@@ -21,22 +22,29 @@ const Button = (props) => {
      */
     iconPosition = 'before',
     hasFillIcon,
-  } = props
+    children,
+  } = props;
 
-  const isLink = href !== undefined
-  const Component = isLink ? 'a' : 'button'
-  const linkProps = { href, target }
-  const buttonProps = { type }
-  const specificProps = isLink ? linkProps : buttonProps
-  const title = isLabelHidden ? label : undefined
+  const isLink = href !== undefined;
+  const Component = isLink ? 'a' : 'button';
+  const linkProps = { href, target };
+  const buttonProps = { type };
+  const specificProps = isLink ? linkProps : buttonProps;
+  const title = isLabelHidden ? label : undefined;
+
+  // Логика для рендера иконки через iconName или дочерние элементы
   const iconComponent = iconName ? (
     <Icon
-      className={classNames(className ? `${className}-icon` : '', "button__icon")} // Проверка на undefined
+      className={classNames(className ? `${className}-icon` : '', 'button__icon')}
       name={iconName}
       hasFill={hasFillIcon}
       iconSize={iconSize}
     />
-  ) : null
+  ) : children && React.isValidElement(children) ? (
+    <span className={classNames(className ? `${className}-icon` : '', 'button__icon')}>
+      {children}
+    </span>
+  ) : null;
 
   const componentClass = classNames(
     className,
@@ -44,7 +52,7 @@ const Button = (props) => {
     {
       [`${isLink ? 'a--' : 'button--'}${mode}`]: mode,
     }
-  )
+  );
 
   return (
     <Component
@@ -54,12 +62,10 @@ const Button = (props) => {
       {...specificProps}
     >
       {iconPosition === 'before' && iconComponent}
-      {!isLabelHidden && label && (
-        <span className="button__label">{label}</span>
-      )}
+      {!isLabelHidden && label && <span className="button__label">{label}</span>}
       {iconPosition === 'after' && iconComponent}
     </Component>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

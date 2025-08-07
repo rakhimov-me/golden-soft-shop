@@ -5,6 +5,8 @@ import PopUpButton from '@/Components/PopUpButton';
 import Button from "@/Components/Button";
 import Promo from "@/layouts/Header/Components/Promo";
 
+import { ReactComponent as CartIcon } from "@/assets/icons/Cart.svg"
+import { ReactComponent as LikedIcon } from "@/assets/icons/Liked.svg"
 
 const Header = (props) => {
   const {
@@ -73,16 +75,18 @@ const Header = (props) => {
               mode="transparent"
               iconName="Liked"
               hasFillIcon
-              iconSize={200}
-            />
+            >
+              <LikedIcon />
+            </Button>
             <Button
               className="header__actions-buttons-cart"
               label="Cart"
               isLabelHidden
               mode="transparent"
-              iconName="Cart"
               // hasFillIcon
-            />
+            >
+              <CartIcon />
+            </Button>
           </div>
         </div>
       </div>
