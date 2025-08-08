@@ -1,7 +1,7 @@
 .categories__card {
   display: flex;
   padding: 40px;
-  width: 35vw;
+  width: 100%;
   position: relative;
 }
 .categories__card::after {

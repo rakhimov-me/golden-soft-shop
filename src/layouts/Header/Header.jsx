@@ -73,7 +73,7 @@ const Header = (props) => {
               label="Liked"
               isLabelHidden
               mode="transparent"
-              iconName="Liked"
+              iconName="Liked"   // ПОМЕНЯЙ !!!!!!!!!!!!!
               hasFillIcon
             >
               <LikedIcon />

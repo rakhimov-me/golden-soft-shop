@@ -2,7 +2,7 @@ import './Test.scss'
 import Button from "@/Components/Button/index.js";
 import React from "react";
 import Icon from "@/Components/Icon/Icon.jsx";
-import { ReactComponent as TestIcon } from "@/assets/icons/arrow.svg"
+import { ReactComponent as TestIcon } from "@/assets/icons/arrow-prev.svg"
 
 
 const Test = (props) => {

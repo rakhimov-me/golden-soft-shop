@@ -1,3 +1,9 @@
-
+.slider-navigation {
+  display: flex;
+  align-items: center;
+}
+.slider-navigation--hero {
+  column-gap: 24px;
+}
 
 /*# sourceMappingURL=SliderNavigation.css.map */
