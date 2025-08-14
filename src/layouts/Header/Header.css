@@ -10,6 +10,22 @@
   animation-timeline: scroll();
   animation-range: 0 100px;
 }
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 101%;
+  pointer-events: none;
+  animation-name: scrolling-header-after;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+@keyframes scrolling-header-after {
+  to {
+    background-color: color-mix(in srgb, black 2%, transparent);
+  }
+}
 @keyframes scrolling-header-border {
   to {
     border-color: var(--color-border);

@@ -87,3 +87,7 @@ a {
     text-decoration: none;
   }
 }
+
+:has(.swiper) {
+  min-width: 0;
+}

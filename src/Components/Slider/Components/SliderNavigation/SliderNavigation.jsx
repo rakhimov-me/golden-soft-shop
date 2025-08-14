@@ -38,8 +38,8 @@ const SliderNavigation = (props) => {
 
       {hasPagination && (
         <div
-          className="slider-navigation-pagination"
-          data-js-slider-pagination = ''
+          className="slider-navigation__pagination"
+          data-js-slider-pagination=""
         />
       )}
 
