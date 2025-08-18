@@ -1,4 +1,4 @@
-const categoryItems = [
+const popularProductsItems = [
   {
     image: '/src/assets/images/Lock-office-2.jpeg',
     title: 'Дверной замок Golden Soft для отелей',
@@ -97,4 +97,4 @@ const categoryItems = [
   }
 ];
 
-export default categoryItems;
+export default popularProductsItems;

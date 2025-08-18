@@ -1,3 +1,46 @@
-
+.hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 70px;
+}
+.hero-card__img {
+  height: 100%;
+  max-width: 30vw;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  border: var(--border-gray);
+}
+.hero-card__content {
+  max-width: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-card__content-title {
+  line-height: 58px;
+}
+.hero-card__content-description {
+  max-width: 80%;
+  margin-bottom: 12px;
+}
+.hero-card__content-purchase-title {
+  font-size: 12px;
+}
+.hero-card__content-purchase-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-block: 4px 16px;
+}
+.hero-card__content-purchase-price-old {
+  color: var(--color-gray-light);
+  text-decoration-line: line-through;
+  text-decoration-thickness: 0.5px;
+}
 
 /*# sourceMappingURL=HeroCard.css.map */

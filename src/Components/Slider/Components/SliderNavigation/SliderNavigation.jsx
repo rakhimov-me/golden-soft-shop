@@ -9,9 +9,9 @@ const SliderNavigation = (props) => {
   const {
     className,
     id,
-    hasPagination = true,
+    hasPagination = false,
     /**
-     * '' (default) | 'hero' 'catalogue'
+     * '' (default) | 'pagination'
      */
     mode = '',
   } = props

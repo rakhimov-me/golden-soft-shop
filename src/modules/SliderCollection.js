@@ -30,6 +30,12 @@ class Slider {
   }
 
   init() {
+    const slideElements = this.swiperElement.querySelectorAll('.swiper-slide');
+    const slideCount = slideElements.length;
+
+    // Set initialSlide to 1 (middle slide) if there are exactly 3 slides
+    const initialSlide = slideCount === 3 ? 1 : 0;
+
     this.swiper = new Swiper(this.swiperElement, {
       ...this.params.sliderParams,
       modules: [Navigation, Pagination, Scrollbar],
@@ -46,6 +52,7 @@ class Slider {
         el: this.scrollbarElement,
         dragClass: 'slider__scrollbar-drag',
       },
+      initialSlide: initialSlide,
       on: {
         slideChange: () => this.updateButtonColors(),
       },
@@ -54,6 +61,13 @@ class Slider {
   }
 
   updateButtonColors() {
+    const hasPagination = this.navigationElement?.querySelector('.slider-navigation__pagination') !== null;
+
+    if (hasPagination) {
+      this.previousButtonElement.style.color = 'var(--color-dark)'
+      return;
+    }
+
     const isFirstSlide = this.swiper.isBeginning
     const isLastSlide = this.swiper.isEnd
 

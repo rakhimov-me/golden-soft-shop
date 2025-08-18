@@ -1,9 +1,6 @@
 import './Popular.scss';
 import ProductCard from '@/Components/ProductCard';
-import categoryItems from "./categoryItems.js";
-
-import { ReactComponent as NextIcon } from "@/assets/icons/arrow-next.svg"
-import { ReactComponent as PrevIcon } from "@/assets/icons/arrow-prev.svg"
+import popularProductsItems from "./PopularProductsItems.js";
 
 import SliderNavigation
   from "@/Components/Slider/Components/SliderNavigation/index.js";
@@ -23,7 +20,6 @@ const Popular = (props) => {
             <SliderNavigation
               mode='hero'
               id={sliderNavigationId}
-              // hasPagination = {false}
             />
           </div>
         </div>
@@ -31,7 +27,7 @@ const Popular = (props) => {
           <Slider
             navigationTargetElementId={sliderNavigationId}
           >
-            {categoryItems.map((product, index) => (
+            {popularProductsItems.map((product, index) => (
               <ProductCard
                 {...product}
                 key={index}
