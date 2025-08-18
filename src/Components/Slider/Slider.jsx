@@ -18,6 +18,7 @@ const Slider = (props) => {
   return (
     <div
       className="slider"
+      style={{ maxWidth: '100%' }}
       data-js-slider={JSON.stringify({
         sliderParams,
         navigationTargetElementId,

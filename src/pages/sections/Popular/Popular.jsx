@@ -23,7 +23,7 @@ const Popular = (props) => {
             <SliderNavigation
               mode='hero'
               id={sliderNavigationId}
-              hasPagination = {false}
+              // hasPagination = {false}
             />
           </div>
         </div>

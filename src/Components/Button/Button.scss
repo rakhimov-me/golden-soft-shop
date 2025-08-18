@@ -36,8 +36,8 @@
       padding: 0;
 
       .button__icon {
-        width: 32px;
-        height: 32px;
+        @include flex-center;
+//        height: 100%;
       }
 
       @include hover() {

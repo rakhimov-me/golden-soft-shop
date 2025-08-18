@@ -30,7 +30,7 @@ class Slider {
   }
 
   init() {
-    new Swiper(this.swiperElement, {
+    this.swiper = new Swiper(this.swiperElement, {
       ...this.params.sliderParams,
       modules: [Navigation, Pagination, Scrollbar],
       navigation: {
@@ -46,7 +46,27 @@ class Slider {
         el: this.scrollbarElement,
         dragClass: 'slider__scrollbar-drag',
       },
+      on: {
+        slideChange: () => this.updateButtonColors(),
+      },
     })
+    this.updateButtonColors()
+  }
+
+  updateButtonColors() {
+    const isFirstSlide = this.swiper.isBeginning
+    const isLastSlide = this.swiper.isEnd
+
+    if (isFirstSlide) {
+      this.previousButtonElement.style.color = 'var(--color-gray-light)'
+      this.nextButtonElement.style.color = 'var(--color-dark)'
+    } else if (isLastSlide) {
+      this.previousButtonElement.style.color = 'var(--color-dark)'
+      this.nextButtonElement.style.color = 'var(--color-gray-light)'
+    } else {
+      this.previousButtonElement.style.color = 'var(--color-dark)'
+      this.nextButtonElement.style.color = 'var(--color-dark)'
+    }
   }
 }
 
