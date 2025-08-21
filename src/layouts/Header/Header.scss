@@ -9,12 +9,33 @@
   animation-fill-mode: both;
   animation-timeline: scroll();
   animation-range: 0 100px;
+  overflow-x: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 101%;
+    pointer-events: none;
+    animation-name: scrolling-header-after;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+
+    @keyframes scrolling-header-after {
+      to {
+//        background-color:  transparent;
+        background-color:  color-mix(in srgb, black 2%, transparent);
+      }
+    }
+  }
 
   @keyframes scrolling-header-border {
     to {
       border-color: var(--color-border);
     }
   }
+
 
 
   &__inner {
@@ -54,7 +75,10 @@
     flex-direction: row;
     gap: 30px;
 
-    &-button {
+    &-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
 
       &-icon {
 
@@ -63,12 +87,6 @@
   }
 
   &__phone {
-    white-space: nowrap;
-    @include flex-center(true);
-    gap: 8px;
 
-    &-icon {
-      @include square(20px);
-    }
   }
 }

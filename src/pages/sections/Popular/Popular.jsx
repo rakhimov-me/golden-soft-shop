@@ -1,44 +1,15 @@
 import './Popular.scss';
 import ProductCard from '@/Components/ProductCard';
+import popularProductsItems from "./PopularProductsItems.js";
+
+import SliderNavigation
+  from "@/Components/Slider/Components/SliderNavigation/index.js";
+import Slider from "@/Components/Slider/index.js";
 
 const Popular = (props) => {
   const {} = props;
 
-  const products = [
-    {
-      image: '/src/assets/images/Lock-hotel-2.jpeg',
-      title: 'Дверной замок Golden Soft для отелей',
-      priceInfo: { current: '33 000₽', previous: '37 000₽' },
-      statuses: { inStock: true,  withGift: false, onSale: false },
-      reviewSummary: { averageRating: 2.2, reviewsCount: 5 },
-      outOfCatalog: true
-    },
-    {
-      image: '/src/assets/images/Lock-hotel-3.jpeg',
-      title: 'Вариативный замок Golden Soft для отелей',
-      priceInfo: { current: '7 000₽',  previous: '8 000₽' },
-      statuses: { inStock: false, withGift: true, onSale: true  },
-      reviewSummary: { averageRating: 4.0, reviewsCount: 8 },
-      outOfCatalog: true
-    },
-    {
-      image: '/src/assets/images/Lock-office.jpeg',
-      title: 'Дверной замок Golden Soft для офиса',
-      priceInfo: { current: '33 000₽', previous: '39 000₽' },
-      statuses: { inStock: true,  withGift: true, onSale: true  },
-      reviewSummary: { averageRating: 3.5, reviewsCount: 5 },
-      outOfCatalog: true
-    },
-    {
-      image: '/src/assets/images/Lock-office-2.jpeg',
-      title: 'Дверной замок Golden Soft для дома',
-      priceInfo: { current: '9 000₽',  previous: '12 000₽' },
-      statuses: { inStock: false, withGift: false, onSale: true  },
-      reviewSummary: { averageRating: 0, reviewsCount: 0 },
-      outOfCatalog: true
-    }
-  ];
-
+  const sliderNavigationId= 'popular-slider-navigation'
 
   return (
     <section className="popular">
@@ -46,38 +17,23 @@ const Popular = (props) => {
         <div className="popular__head">
           <h2 className="popular__head-title">Наши популярные продукты</h2>
           <div className="popular__head-arrows">
-            <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-                <clipPath id="clip52_1272">
-                  <rect id="Frame" rx="0.000000" width="39.000000" height="39.000000" transform="translate(40.500000 40.500000) rotate(180.000000)" fill="white" fill-opacity="0"/>
-                </clipPath>
-              </defs>
-              <rect id="Frame" rx="0.000000" width="39.000000" height="39.000000" transform="translate(40.500000 40.500000) rotate(180.000000)" fill="#FFFFFF" fill-opacity="0"/>
-              <g clip-path="url(#clip52_1272)">
-                <path id="Vector" d="M26.66 33.33L13.33 20L26.66 6.66" stroke="#C4CDD5" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-              </g>
-            </svg>
-            <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-                <clipPath id="clip52_1272">
-                  <rect id="Frame" rx="0.000000" width="39.000000" height="39.000000" transform="translate(40.500000 40.500000) rotate(180.000000)" fill="white" fill-opacity="0"/>
-                </clipPath>
-              </defs>
-              <rect id="Frame" rx="0.000000" width="39.000000" height="39.000000" transform="translate(40.500000 40.500000) rotate(180.000000)" fill="#FFFFFF" fill-opacity="0"/>
-              <g clip-path="url(#clip52_1272)">
-                <path id="Vector" d="M26.66 33.33L13.33 20L26.66 6.66" stroke="#C4CDD5" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-              </g>
-            </svg>
+            <SliderNavigation
+              mode='hero'
+              id={sliderNavigationId}
+            />
           </div>
         </div>
         <div className="popular__cards">
-          <ul className="popular__cards-list">
-            {products.map((product, index) => (
-              <li key={index} className="popular__cards-list-item">
-                <ProductCard {...product} />
-              </li>
+          <Slider
+            navigationTargetElementId={sliderNavigationId}
+          >
+            {popularProductsItems.map((product, index) => (
+              <ProductCard
+                {...product}
+                key={index}
+              />
             ))}
-          </ul>
+          </Slider>
         </div>
       </div>
     </section>

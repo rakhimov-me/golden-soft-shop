@@ -1,0 +1,57 @@
+.test {
+  padding-block: var(--section-padding-y);
+
+  &__body {
+    @include flex-center();
+    flex-direction: column;
+    gap: 50px;
+
+    .button-test {
+      @include flex-center();
+      flex-direction: column;
+
+      &__button {
+//        outline: black 1px solid;
+
+        &-icon {
+//          outline: red 1px dashed;
+        }
+      }
+    }
+
+    .test__row {
+      width: 100%;
+      @include flex-center;
+      flex-direction: row; // Горизонтальное размещение
+      flex-wrap: wrap; // Перенос на следующую строку, если не хватает места
+      gap: 100px; // Промежуток 50px между элементами
+    }
+
+    &-title {
+      width: 100%;
+      text-align: center;
+      border-top:  1px solid var(--text-gray-lighter);
+      padding-top: 10px;
+    }
+
+
+
+  }
+}
+
+.light {
+  background-color: var(--bg-dark);
+}
+
+.button-test__button {
+
+  svg {
+//    stroke: red;
+  }
+}
+
+.divider {
+  height: 100px;
+  width: 1px;
+  background-color: black;
+}

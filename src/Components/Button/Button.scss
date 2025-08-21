@@ -17,7 +17,6 @@
   }
 
   @include hover {
-    color: var(--color-white);
     background-color: var(--color-primary-hover);
   }
 
@@ -26,13 +25,34 @@
   }
 
   &--transparent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     background-color: transparent;
+    color: var(--color-gray);
 
-    &:has(.button__icon:only-child) {
+    &:has(> .button__icon):not(:has(> .button__label)) {
       @include square(44px);
+      padding: 0;
 
       .button__icon {
-        --iconSize: #{fluid-to-laptop(34, 24)};
+        @include flex-center;
+//        height: 100%;
+      }
+
+      @include hover() {
+        .button__icon svg {
+          color: var(--color-primary);
+        }
+      }
+    }
+
+    &:has(> .button__label) {
+      @include hover() {
+        color: var(--color-primary);
+        .button__icon svg {
+          color: var(--color-primary);
+        }
       }
     }
 
@@ -42,18 +62,77 @@
   }
 }
 
+/* Стили для ссылок */
+.a {
+  &:has(> .button__icon):not(:has(> .button__label)) {
+    @include flex-center(true);
+    @include square(44px);
+    color: inherit;
 
+    .button__icon {
+      width: 32px;
+      height: 32px;
+    }
 
-/*
-When it hasn't any text
-*/
+    @include hover() {
+      .button__icon svg {
+        color: var(--color-primary);
+      }
+    }
+  }
 
-.button__icon {
-  @include flex-center(true);
-  background-color: transparent;
-  border: none;
-  svg {
+  &:has(> .button__icon) > .button__label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
     color: var(--color-gray);
+    text-decoration: none;
+    white-space: nowrap;
+
+    span {
+      vertical-align: initial;
+    }
+
+    .button__label {
+      background-color: red;
+    }
+
+    .button__icon svg {
+//      color: var(--color-primary);
+    }
+
+    @include hover() {
+      color: var(--color-primary);
+      .button__icon svg {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &--light {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 300;
+
+    @include hover() {
+      color: var(--color-primary);
+    }
+  }
+
+  &--dark {
+    color: var(--color-dark);
+    text-decoration: none;
+
+    @include hover() {
+      color: var(--color-primary);
+    }
+  }
+}
+
+/* Общие стили для иконок */
+.button__icon {
+  svg {
+    color: inherit;
 
     @include hover {
       color: var(--color-primary);

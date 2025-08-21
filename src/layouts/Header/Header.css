@@ -1,17 +1,73 @@
-/* Error: Undefined mixin.
- *    ,
- * 67 |     @include flex-center(true);
- *    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   Header.scss 67:5  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 67 \2502      @include flex-center(true);\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   Header.scss 67:5  root stylesheet";
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  border-bottom: var(--border-width-s) solid transparent;
+  animation-name: scrolling-header-border;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+  overflow-x: hidden;
 }
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 101%;
+  pointer-events: none;
+  animation-name: scrolling-header-after;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+@keyframes scrolling-header-after {
+  to {
+    background-color: color-mix(in srgb, black 2%, transparent);
+  }
+}
+@keyframes scrolling-header-border {
+  to {
+    border-color: var(--color-border);
+  }
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 16px;
+  padding-block: 20px;
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+@keyframes scrolling-header {
+  to {
+    padding-block: 15px;
+  }
+}
+.header__body {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  color: var(--color-dark);
+}
+.header__actions {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.header__actions-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+/*# sourceMappingURL=Header.css.map */

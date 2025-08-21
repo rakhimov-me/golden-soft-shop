@@ -44,46 +44,31 @@
     display: flex;
     gap: 95px;
 
-    &-item {
+    &-column {
       display: flex;
       flex-direction: column;
       gap: fluid(24, 12);
-//      white-space: normal;
-//      word-break: break-word;
 
       &-title {
         color: var(--color-white);
       }
     }
-    .nested {
 
-      .footer__menu-list-subtitle {
-        color: var(--text-gray-lighter);
+    &-list {
+      &-item {
+        margin-bottom: fluid(16, 12);
+
+        .nested {
+          margin-bottom: 12px;
+        }
+      }
+
+      &-subtitle {
+        color: var(--color-gray-lighter);
         margin-block: 24px 16px;
 
         &:first-child {
           margin-top: 0;
-        }
-      }
-
-      .footer__menu-list-item {
-        margin-bottom: 12px;
-      }
-    }
-
-    &-list {
-      font-weight: 300;
-
-      &-item {
-        margin-bottom: fluid(16, 12);
-
-        a {
-          color:  var(--color-white);
-          text-decoration: none;
-
-          @include hover() {
-            color: var(--color-primary);
-          }
         }
       }
     }
