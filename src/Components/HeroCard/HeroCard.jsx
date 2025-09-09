@@ -1,5 +1,5 @@
 import './HeroCard.scss';
-import Button from '@/components/Button';
+import Button from '@/Components/Button';
 
 const HeroCard = ({
                     image,
