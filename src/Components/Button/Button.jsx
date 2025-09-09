@@ -1,7 +1,7 @@
 import React from 'react'; // Добавляем импорт React
 import './Button.scss';
 import classNames from 'classnames';
-import Icon from '@/components/Icon';
+import Icon from '@/Components/Icon';
 
 const Button = (props) => {
   const {
