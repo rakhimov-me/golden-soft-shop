@@ -3,6 +3,7 @@ import { Head } from 'minista'
 import Header from '@/layouts/Header'
 import Content from '@/layouts/Content'
 import Footer from '@/layouts/Footer'
+import { Provider } from "@/components/ui/provider"
 
 export default function (props) {
   const {
@@ -20,11 +21,13 @@ export default function (props) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Header />
-      <Content>
-        {children}
-      </Content>
-      <Footer />
+      <Provider>
+        <Header />
+        <Content>
+          {children}
+        </Content>
+        <Footer />
+      </Provider>
     </>
   )
 }
